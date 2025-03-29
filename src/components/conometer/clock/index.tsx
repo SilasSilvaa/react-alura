@@ -10,8 +10,8 @@ export default function Clock({ time = 0 }: Props) {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
 
-    const [minutesTenth, minutesUnit] = String(minutes);
-    const [secondsTenth, secodnsUnit] = String(seconds);
+    const [minutesTenth, minutesUnit] = String(minutes).padStart(2, "0");
+    const [secondsTenth, secodnsUnit] = String(seconds).padStart(2, "0");
 
     return (
         <>
